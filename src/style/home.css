@@ -21,7 +21,7 @@ color: #a1a1a1;
     .todoWrapper{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 8px;
     }
     .todoHeading{
         background-color: green;
