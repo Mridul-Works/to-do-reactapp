@@ -28,7 +28,7 @@ const InputForm = () => {
 
   return (
     <div className="inputForm">
-      <h2>Input</h2>
+      <h2>To Do List In React JS</h2>
       <form onSubmit={saveToDoList}>
         <input type="text" name="toName" placeholder="Enter task..." required />
         <button type="submit">Save</button>
