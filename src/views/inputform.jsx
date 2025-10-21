@@ -17,8 +17,13 @@ const InputForm = () => {
       console.log(finalToDoList);
     }
 
-    // clear the input after saving
     event.target.reset();
+  };
+
+  // 🗑️ Delete a task by its index
+  const deleteToDo = (indexToRemove) => {
+    const updatedList = toDoList.filter((_, index) => index !== indexToRemove);
+    setToDoList(updatedList);
   };
 
   return (
@@ -30,12 +35,20 @@ const InputForm = () => {
       </form>
 
       <div className="outerDiv">
-
-      <ul>
-        {toDoList.map((item, index) => (
-          <li key={index}>{item}  <span >&times;</span></li>
-        ))}
-      </ul>
+        <ul>
+          {toDoList.map((item, index) => (
+            <li key={index}>
+              {item}
+              <span
+                className="deleteBtn"
+                onClick={() => deleteToDo(index)} // 👈 delete specific task
+                title="Delete task"
+              >
+                &times;
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
