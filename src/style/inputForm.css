@@ -1,0 +1,21 @@
+
+
+.inputForm{
+
+
+    form{
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+    }
+    form input{
+
+        height: 40px;
+        flex-basis: 80%;
+    }
+    form button{
+        flex-basis: 10%;
+    }
+}
